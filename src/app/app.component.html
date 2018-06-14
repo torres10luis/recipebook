@@ -1,11 +1,11 @@
 <div class="row xs-12">
-  <header-lmnt ></header-lmnt>
-</div> 
+  <header-lmnt (featureSelected)="navigate($event)" ></header-lmnt>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <recipes></recipes>
-      <shopping-list></shopping-list>
+      <recipes *ngIf="loadedFeature === 'recipe'"></recipes>
+      <shopping-list *ngIf="loadedFeature === 'shopping-list'"></shopping-list>
     </div>
   </div>
 </div>
