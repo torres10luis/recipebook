@@ -13,7 +13,7 @@ export class ShoppingListComponent implements OnInit {
       name: 'Apple',
       amount: 5
     },
-    new Ingredient('tomatoes', 10)
+    new Ingredient('Tomatoes', 10)
   ];
   constructor() { }
 
