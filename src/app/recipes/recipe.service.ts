@@ -1,4 +1,5 @@
 import { Recipe } from './recipe.model';
+import { EventEmitter } from '@angular/core';
 
 export class RecipeService {
     private recipes: Recipe[] = [
@@ -9,6 +10,8 @@ export class RecipeService {
     },
     new Recipe ( 'a test recipe', 'this is a sample test.', 'https://memphisgrills.com/wp-content/uploads/2016/09/Korean-Tacos.jpg')
   ];
+
+  recipeSelected = new EventEmitter<Recipe>();
 
   getRecipes(): Recipe [] {
     return this.recipes.slice(); // return exact copy of original array
