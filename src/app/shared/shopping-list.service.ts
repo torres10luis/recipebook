@@ -21,4 +21,14 @@ export class ShoppingListService {
     this.ingredientChanged.emit(this.ingredients.slice());
   }
 
+  addIngredients(ingredients: Ingredient[] ) {
+    // tslint:disable-next-line:prefer-const
+    // for (let ingredient of ingredients) {
+    //   this.addIngredient(ingredient);
+    // }
+    // this makes an array of ingredients into a list one by one
+    this.ingredients.push(...ingredients);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
+
 }
