@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
    // tslint:disable-next-line:component-selector
@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  @Output() featureSelected = new EventEmitter<string>();
+
+  selectFeature(feature: string) {
+    this.featureSelected.emit(feature);
+  }
 }
